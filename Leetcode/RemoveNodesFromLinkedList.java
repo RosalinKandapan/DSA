@@ -4,37 +4,47 @@ import leetcode.Reverse_LinkedListIteratively.Node;
 
 public class RemoveNodesFromLinkedList {
 	
-	public static Node remove(Node head) {
-//		Node left = head;
-//		Node right = head.next;
-//		while(right.next!=null) {
-//		if(left.data<right.data) {
-//			left=right;
-//			right=left.next;
-//
-//		} else
-//		{
-//			right=right.next;
-//		}
-//	}
-//		return left;
-		
-		Node curr=head;
-		int max=head.data;
-		Node prev =head;
-		 head= head.next;
-		 while(head.next!=null) {
-			 if(max<=head.data) {
-				 max=head.data;
-				 prev=head;
-				 head=head.next;
-			 } else {
-				 prev.next=head.next;
-				 head=prev.next;
-			 }
-		 }
-		 return prev;
-		} 
+	public static Node removeNodes(Node head) {
+		if (head == null) {
+            return null;
+        }
+        
+        head = reverse(head);
+        Node current = head;
+        Node maxNode = head;
+        
+        while (current != null && current.next != null) {
+            if (current.next.data < maxNode.data) {
+                current.next = current.next.next;
+            } else {
+                current = current.next;
+                maxNode = current;
+            }
+        }
+        
+        
+        return reverse(head);
+    }
+    
+    
+    private static Node reverse(Node head) {
+        Node prev = null;
+        while (head != null) {
+            Node next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
+    }
+
+    
+
+    //Recursive approch
+    /* if(head==null) return null;
+        head.next = removeNodes(head.next);
+        return head.next != null && head.data < head.next.data ? head.next : head;*/
+		 
 	
 	
 	
@@ -45,7 +55,7 @@ public class RemoveNodesFromLinkedList {
 		head.next.next =new Node(13);
 		head.next.next.next =new Node(3);
 		head.next.next.next.next =new Node(8);
-Node right=		remove(head);
+		Node right = removeNodes(head);
 		System.out.println(right.data);
 	}
 
