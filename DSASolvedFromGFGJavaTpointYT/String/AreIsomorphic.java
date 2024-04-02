@@ -1,3 +1,5 @@
+//Check if two given Strings are Isomorphic to each other
+
 import java.util.HashMap;
 
 public class AreIsomorphic {
