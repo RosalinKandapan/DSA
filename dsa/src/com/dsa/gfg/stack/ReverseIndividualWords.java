@@ -36,5 +36,7 @@ public class ReverseIndividualWords {
 
 }
 
-/*Time Complexity: O(n), where n is the length of the string
-Auxiliary Space: O(n), where n is the length of the string*/
+/*
+ * Time Complexity: O(n), where n is the length of the string
+Auxiliary Space: O(n), where n is the length of the string
+*/
