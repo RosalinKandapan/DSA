@@ -41,6 +41,5 @@ public static int deQue() {
 
 
 
-/*
- * Class name you can use Queue
+/*Class name you can use Queue
  */
