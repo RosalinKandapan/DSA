@@ -1,6 +1,6 @@
 package com.dsa.gfg.stack;
 import java.util.Stack;
-public class QueueUsingTwoStacks {
+public class ImplementQueueUsingTwoStacks {
 	
 	static Stack<Integer> stack1 = new Stack<Integer>();
 	static Stack<Integer> stack2 = new Stack<Integer>();
@@ -27,7 +27,7 @@ public static int deQue() {
 	return x;
 }
 	public static void main(String[] args) {
-		QueueUsingTwoStacks queue= new QueueUsingTwoStacks();
+		ImplementQueueUsingTwoStacks queue= new ImplementQueueUsingTwoStacks();
 		queue.enQueue(1);
 		queue.enQueue(2);
 		queue.enQueue(3);
