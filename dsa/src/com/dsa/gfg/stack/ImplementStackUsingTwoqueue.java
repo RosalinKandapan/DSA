@@ -17,16 +17,49 @@ public class ImplementStackUsingTwoqueue {
 		q1 = q2;
 		q2 = q;
 	}
+	
+	 static int top()
+     {
+         if (q1.isEmpty())
+             return -1;
+         return q1.peek();
+     }
+	  static void pop()
+      {
 
+          // if no elements are there in q1
+          if (q1.isEmpty())
+              return;
+          q1.remove();
+      }
+	  
+	 
+
+		
 	public static void main(String[] args) {
 		
 		ImplementStackUsingTwoqueue implementStackUsingTwoqueue = new ImplementStackUsingTwoqueue();
 		implementStackUsingTwoqueue.push(1);
 		implementStackUsingTwoqueue.push(2);
 		implementStackUsingTwoqueue.push(3);
-		implementStackUsingTwoqueue.push(4);
+		for(Integer qw:q1) {
+			 System.out.println("qw"+qw);
+		}
+		//System.out.println("current size: " + implementStackUsingTwoqueue.size());
+        System.out.println(implementStackUsingTwoqueue.top());
+        implementStackUsingTwoqueue.pop();
+        System.out.println(implementStackUsingTwoqueue.top());
+        implementStackUsingTwoqueue.pop();
+        System.out.println(implementStackUsingTwoqueue.top());
 
-
+      //  System.out.println("current size: " + implementStackUsingTwoqueue.size());
+    	Queue<Integer> q3 = new LinkedList<Integer>();
+    	q3.add(1);
+    	q3.add(2);
+    	q3.add(3);
+    	for(Integer qq :q3) {
+    		System.out.println("q3"+qq);
+}
 	}
 
 }
