@@ -44,3 +44,6 @@ public class EvaluatePostfixExpression {
 	}
 
 }
+/*TC:O(n)
+ * SC:O(n)
+ */
