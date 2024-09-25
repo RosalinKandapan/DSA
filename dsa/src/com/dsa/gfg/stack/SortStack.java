@@ -43,5 +43,4 @@ public class SortStack {
 }
 /*
  * Tc-O(n2)
- * SC-O(n)
- */
+ * SC-O(n)*/
