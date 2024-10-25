@@ -1,5 +1,5 @@
 package com.dsa.gfg.stack;
-
+import java.util.Stack;
 public class ConvertInfixExpressionToPostfix {
 	int prec(char c) {
         if (c == '^')
@@ -59,8 +59,12 @@ public class ConvertInfixExpressionToPostfix {
     }
 
     public static void main(String[] args) {
-        GfG gfg = new GfG();
+    	ConvertInfixExpressionToPostfix gfg = new ConvertInfixExpressionToPostfix();
         String exp = "a+b*(c^d-e)^(f+g*h)-i";
         gfg.infixToPostfix(exp);
     }
 }
+/*
+ * Time Complexity: O(N), where N is the size of the infix expression
+Auxiliary Space: O(N), where N is the size of the infix expression
+ */
