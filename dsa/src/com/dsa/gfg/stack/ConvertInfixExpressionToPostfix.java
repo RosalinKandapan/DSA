@@ -59,9 +59,9 @@ public class ConvertInfixExpressionToPostfix {
     }
 
     public static void main(String[] args) {
-    	ConvertInfixExpressionToPostfix gfg = new ConvertInfixExpressionToPostfix();
+    	ConvertInfixExpressionToPostfix obj = new ConvertInfixExpressionToPostfix();
         String exp = "a+b*(c^d-e)^(f+g*h)-i";
-        gfg.infixToPostfix(exp);
+        obj.infixToPostfix(exp);
     }
 }
 /*
