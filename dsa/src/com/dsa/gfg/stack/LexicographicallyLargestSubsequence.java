@@ -71,5 +71,5 @@ public class LexicographicallyLargestSubsequence {
 }
 /*
  * Time Complexity: O(N)
-Auxiliary Space: O(N)
+   Auxiliary Space: O(N)
  */
